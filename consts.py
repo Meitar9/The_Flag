@@ -1,1 +1,4 @@
 game_board = []
+
+WINDOW_HEIGHT = 750
+WINDOW_WIDTH = 1500
