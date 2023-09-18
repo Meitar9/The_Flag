@@ -10,12 +10,16 @@ def green():
     pygame.display.flip()
 
 def drew_grass():
-    pygame.transform.scale(consts.GRASS, (1, 1))
-#    consts.GRASS.get_size(50, 50)
+    grass = pygame.transform.scale(consts.GRASS, (50, 50))
+    place_of_grass = {}
     for show_grass in range(20):
-        x = random.randint(0, 750)
-        y = random.randint(0, 1500)
-
-        screen.blit(consts.GRASS, (x, y))
+        x = random.randint(0, 1450)
+        while x in place_of_grass.keys():
+            x = random.randint(0, 1450)
+        y = random.randint(0, 700)
+        while y in place_of_grass.values():
+            y = random.randint(0, 700)
+        place_of_grass[x] = y
+        screen.blit(grass, (x, y))
         pygame.display.flip()
     return
