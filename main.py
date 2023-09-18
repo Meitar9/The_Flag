@@ -1,5 +1,6 @@
 import pygame
 import screen
+import soldier
 
 state = {"running": True}
 def open_screen():
