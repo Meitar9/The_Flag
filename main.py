@@ -5,6 +5,7 @@ state = {"running": True}
 def open_screen():
     pygame.init()
     screen.green()
+    screen.drew_grass()
     while state["running"]:
         close()
 
