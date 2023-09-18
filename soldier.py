@@ -1,4 +1,11 @@
 import consts
+import pygame
+import screen
+
 
 def start_point():
-    gameDisplay.blit(consts.SOLDIER, (30, 30))
+    soldier = pygame.transform.scale(consts.SOLDIER, (50, 50))
+#   consts.game_board.append(soldier)
+    screen.screen.blit(soldier, (0, 0))
+    pygame.display.flip()
+    return

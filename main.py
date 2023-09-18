@@ -7,8 +7,10 @@ def open_screen():
     pygame.init()
     screen.green()
     screen.drew_grass()
+    soldier.start_point()
     while state["running"]:
         close()
+
 
 
 def close():
