@@ -3,10 +3,10 @@ import screen
 
 state = {"running": True}
 def open_screen():
+    pygame.init()
+    screen.green()
     while state["running"]:
         close()
-        pygame.init()
-        screen.green()
 
 
 def close():
