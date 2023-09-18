@@ -15,7 +15,7 @@ def build_game_board(game_board):
         pygame.init()
 
 def draw_rect(row, col):
-    pygame.draw.rect(surface=screen.screen, color=consts.rect_color, rect=((place_rect(row, col)), (30, 30)), width=1)
+    pygame.draw.rect(surface=consts.screen2, color=consts.rect_color, rect=((place_rect(row, col)), (30, 30)), width=1)
     pygame.display.flip()
 
 def place_rect(row, col):
@@ -34,7 +34,7 @@ def drew_mine():
         while y in place_of_mine.values():
             y = random.randint(0, 600)
         place_of_mine[x] = y
-        consts.game_board.blit(mine, (x, y))
+        consts.screen2.blit(mine, (x, y))
 #        consts.game_board[x][y].append(mine)
 #        pygame.draw.(surface=screen.screen, rect = mine, (30, 30)), width = 1)
         pygame.display.flip()

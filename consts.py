@@ -1,8 +1,8 @@
 import pygame
 game_board = []
-
 WINDOW_HEIGHT = 750
 WINDOW_WIDTH = 1500
+screen2 = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
 background_color = (61,145,64)
 rect_color = (0,100,0)
 soldier_x = 0
