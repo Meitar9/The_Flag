@@ -8,6 +8,7 @@ def open_screen():
     screen.green()
     screen.drew_grass()
     soldier.start_point()
+    screen.draw_flag()
     while state["running"]:
         close()
 
