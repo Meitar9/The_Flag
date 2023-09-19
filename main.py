@@ -10,17 +10,17 @@ def open_screen():
     soldier.start_point()
     screen.draw_flag()
     while state["running"]:
-        close()
+        event()
         if pygame.key.get_focused():
-            # soldier.recognize_movement(pygame.key.get_pressed())
-            key = pygame.key.get_pressed()
-
-            continue
+            soldier.recognize_movement(pygame.key.get_pressed())
 
 
-def close():
+
+def event():
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             state["running"] = False
+        elif event.type == pygame.KEYDOWN:
+            soldier.recognize_movement(pygame.key.get_pressed())
 
 open_screen()
