@@ -1,6 +1,7 @@
 import random
 import consts
 import pygame
+import soldier
 
 import screen
 
@@ -12,6 +13,7 @@ def build_game_board(game_board):
             row_list.append(draw_rect(row, col))
         game_board.append(row_list)
     game_board.append(drew_mine())
+    game_board.append(soldier.drew_solider_nigth())
     while True:
         pygame.init()
 

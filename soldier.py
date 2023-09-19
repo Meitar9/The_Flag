@@ -4,7 +4,7 @@ import screen
 
 
 def start_point():
-    soldier = pygame.transform.scale(consts.SOLDIER, (60, 120))
+    soldier = pygame.transform.scale(consts.SOLDIER, (120, 120))
 #   consts.game_board.append(soldier)
     screen.screen.blit(soldier, (consts.soldier_x, consts.soldier_y))
     pygame.display.flip()
@@ -27,3 +27,9 @@ def recognize_movement(keys):
 
     return
 
+def drew_solider_nigth():
+    soldier_nigth = pygame.transform.scale(consts.SOLDIER_NIGTH, (120, 120))
+    consts.screen2.blit(soldier_nigth, (consts.soldier_x, consts.soldier_y))
+    pygame.display.flip()
+    consts.MINE.convert()
+    return
