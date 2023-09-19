@@ -11,8 +11,6 @@ def open_screen():
     screen.draw_flag()
     while state["running"]:
         event()
-        if pygame.key.get_focused():
-            soldier.recognize_movement(pygame.key.get_pressed())
 
 
 
