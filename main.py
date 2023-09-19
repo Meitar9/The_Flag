@@ -21,16 +21,16 @@ def event():
         if event.type == pygame.QUIT:
             state["running"] = False
         elif event.type == pygame.KEYDOWN:
-            if event.type == pygame.K_SPACE:
-                if event.type == pygame.K_SPACE:
-                    space()
-                else:
+            # if event.type == pygame.K_SPACE:
+                # if event.type == pygame.K_SPACE:
+                #     space()
+                # else:
                     soldier.recognize_movement(pygame.key.get_pressed())
 
-def space():
-    game_field.build_game_board(consts.game_board)
-    time.sleep(1)
-    return
+# def space():
+#     game_field.build_game_board(consts.game_board)
+#     time.sleep(1)
+#     return
 
 
 

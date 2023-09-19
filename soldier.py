@@ -1,6 +1,7 @@
 import consts
 import pygame
 import screen
+import os
 
 
 def start_point():
@@ -11,6 +12,7 @@ def start_point():
 
 
 def recognize_movement(keys):
+    os.remove(consts.soldier)
     if keys[pygame.K_LEFT] and check_lines():
         consts.soldier_x -= 30
     elif keys[pygame.K_RIGHT] and check_lines():
