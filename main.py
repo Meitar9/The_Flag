@@ -1,6 +1,4 @@
 import pygame
-from pygame import KEYDOWN
-
 import screen
 import soldier
 
