@@ -12,7 +12,10 @@ def open_screen():
     while state["running"]:
         close()
         if pygame.key.get_focused():
-            soldier.recognize_movement(pygame.key.get_pressed())
+            # soldier.recognize_movement(pygame.key.get_pressed())
+            key = pygame.key.get_pressed()
+
+            continue
 
 
 def close():
