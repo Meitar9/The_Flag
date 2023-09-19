@@ -30,12 +30,9 @@ def event():
         if event.type == pygame.QUIT:
             state["running"] = False
         elif event.type == pygame.KEYDOWN:
-            if event.type == pygame.K_SPACE:
-                game_field.draw_game_board(consts.game_board)
-        #         # game_field.draw_game_board(consts.game_board)
-        #         # screen.screen.fill(0, 0, 0)
-        #         # game_field.draw_rect()
-        #         # pygame.time.delay(1000)
+            if event.type == 768:
+                game_field.build_game_board(consts.game_board)
+                open_screen()
             else:
                 soldier.recognize_movement(pygame.key.get_pressed())
 

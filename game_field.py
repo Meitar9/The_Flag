@@ -7,6 +7,7 @@ import soldier
 
 
 def build_game_board(game_board):#בניית המטריצה
+    screen.screen.fill(consts.BLACK)
     for row in range(25):
         row_list = []
         for col in range(50):
@@ -14,6 +15,7 @@ def build_game_board(game_board):#בניית המטריצה
         game_board.append(row_list)
     game_board.append(drew_mine())
     game_board.append(soldier.drew_solider_nigth())
+    pygame.time.delay(1000)
     return pygame.display.flip()
 
 def draw_rect(row, col):#ציור הקוביות
@@ -59,12 +61,3 @@ def touch_in_boom():#בודק האם נוגע בפצצה
             return True
         else:
             return False
-
-def draw_game_board(game_board):
-    screen.screen.fill(consts.BLACK)
-    rect = pygame.Rect(game_board)
-    pygame.draw.rect(screen.screen, consts.BLACK, rect)
-    pygame.display.flip()
-    pygame.time.wait(1000)
-
-build_game_board(consts.game_board)
