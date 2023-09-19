@@ -18,6 +18,9 @@ def drew_grass():
         y = random.randint(0, 700)
         while y in place_of_grass.values():
             y = random.randint(0, 700)
+        while x < 60 and y < 120 or x > 1380 and y > 660:
+            x = random.randint(0, 1450)
+            y = random.randint(0, 700)
         place_of_grass[x] = y
         screen.blit(grass, (x, y))
         pygame.display.flip()
@@ -32,11 +35,13 @@ def draw_flag():
 def draw_lose_message():
     draw_message(consts.LOSE_MESSAGE, consts.LOSE_FONT_SIZE,
                  consts.LOSE_COLOR, consts.LOSE_LOCATION)
+    pygame.time.delay(3000)
 
 
 def draw_win_message():
     draw_message(consts.WIN_MESSAGE, consts.WIN_FONT_SIZE,
                  consts.WIN_COLOR, consts.WIN_LOCATION)
+    pygame.time.delay(3000)
 
 def draw_message(message, font_size, color, location):
     font = pygame.font.SysFont(consts.LOSE_FONT_SIZE)
