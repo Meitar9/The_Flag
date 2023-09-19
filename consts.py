@@ -1,5 +1,6 @@
 import pygame
 game_board = []
+place_of_mine = {}
 WINDOW_HEIGHT = 750
 WINDOW_WIDTH = 1500
 screen2 = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
