@@ -1,4 +1,6 @@
 import pygame
+import time
+import consts
 import screen
 import soldier
 
@@ -19,8 +21,16 @@ def event():
         if event.type == pygame.QUIT:
             state["running"] = False
         elif event.type == pygame.KEYDOWN:
-            soldier.recognize_movement(pygame.key.get_pressed())
-        elif event.type == pygame.K_SPACE:
+            if event.type == pygame.K_SPACE:
+                if event.type == pygame.K_SPACE:
+                    space()
+                else:
+                    soldier.recognize_movement(pygame.key.get_pressed())
+
+def space():
+    game_field.build_game_board(consts.game_board)
+    time.sleep(1)
+    return
 
 
 
