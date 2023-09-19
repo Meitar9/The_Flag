@@ -16,8 +16,12 @@ def open_screen():
         event()
         if game_field.touch_in_flag():
             state["state"] = consts.WIN_STATE
+            screen.draw_win_message()
+            state["running"] = False
         elif game_field.touch_in_boom():
             state["state"] = consts.LOSE_STATE
+            screen.draw_lose_message()
+            state["running"] = False
 
 
 def event():
