@@ -11,13 +11,13 @@ def start_point():
 
 
 def recognize_movement(keys):
-    if keys[pygame.K_LEFT]:
+    if keys[pygame.K_LEFT] and check_lines():
         consts.soldier_x -= 30
-    elif keys[pygame.K_RIGHT]:
+    elif keys[pygame.K_RIGHT] and check_lines():
         consts.soldier_x += 30
-    elif keys[pygame.K_UP]:
+    elif keys[pygame.K_UP] and check_lines():
         consts.soldier_y -= 30
-    elif keys[pygame.K_DOWN]:
+    elif keys[pygame.K_DOWN] and check_lines():
         consts.soldier_y += 30
     screen.screen.blit(consts.soldier, (consts.soldier_x, consts.soldier_y))
     pygame.display.update()
@@ -35,3 +35,8 @@ solider_leg_x = consts.soldier_x + 90
 solider_leg_y = consts.soldier_y + 120
 solider_body_x = consts.soldier_x + 90
 solider_body_y = consts.soldier_y + 90
+
+def check_lines(): #בודק האם אפשר להתקדם
+    if consts.soldier_x <= 1450 or consts.soldier_y <= 600 or consts.soldier_x >= 30 or consts.soldier_y >= 30:
+        return True
+    return False
