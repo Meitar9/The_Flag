@@ -1,10 +1,11 @@
 import pygame
 import time
 import consts
+import game_field
 import screen
 import soldier
 
-state = {"running": True}
+state = {"running": True, "state": consts.RUNNING_STATE}
 def open_screen():
     pygame.init()
     screen.green()
@@ -13,7 +14,10 @@ def open_screen():
     screen.draw_flag()
     while state["running"]:
         event()
-
+        if game_field.touch_in_flag():
+            state["state"] = consts.WIN_STATE
+        elif game_field.touch_in_boom():
+            state["state"] = consts.LOSE_STATE
 
 
 def event():
