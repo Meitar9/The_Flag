@@ -14,8 +14,6 @@ def build_game_board(game_board):#בניית המטריצה
         game_board.append(row_list)
     game_board.append(drew_mine())
     game_board.append(soldier.drew_solider_nigth())
-    while True:
-        pygame.init()
 
 def draw_rect(row, col):#ציור הקוביות
     pygame.draw.rect(surface=consts.screen2, color=consts.rect_color, rect=((place_rect(row, col)), (30, 30)), width=1)
@@ -61,10 +59,6 @@ def touch_in_boom():#בודק האם נוגע בפצצה
         else:
             return False
 
-
-
-
-
-
 build_game_board(consts.game_board)
-drew_mine()
+
+
