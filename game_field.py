@@ -29,27 +29,39 @@ def place_rect(row, col):
 
 def drew_mine():
     mine = pygame.transform.scale(consts.MINE, (90, 30))
-    place_of_mine = {}
     for show_grass in range(20):
         x = random.randrange(90, 1410, 30)
-        while x in place_of_mine.keys():
+        while x in consts.place_of_mine.keys():
             x = random.randrange(90, 1410, 30)
         y = random.randrange(30, 720, 30)
-        while y in place_of_mine.values():
+        while y in consts.place_of_mine.values():
             y = random.randrange(30, 720, 30)
-        while x <= 60 and y <= 120 or x >= 1380 and y >= 630:
+        while x < 60 and y < 120 or x > 1380 and y > 660:
             x = random.randrange(90, 1410, 30)
             y = random.randrange(30, 720, 30)
-        place_of_mine[x] = y
+        consts.place_of_mine[x] = y
         consts.screen2.blit(mine, (x, y))
     pygame.display.flip()
     consts.MINE.convert()
     return
 
 def touch_in_flag():
-    if consts.soldier_body_x >= 1380 and consts.soldier_y >= 660:
+    if soldier.solider_body_x > 1380 and soldier.solider_body_y > 660:
         return True
     return False
+
+def touch_in_boom():
+    for x in consts.place_of_mine.keys():
+        boom_start_place_x = x
+        boom_start_place_y = consts.place_of_mine[x]
+        boom_end_place_x = x + 90
+        boom_end_place_y = consts.place_of_mine[x] + 30
+        if soldier.solider_leg_x > boom_start_place_x and soldier.solider_leg_x < boom_end_place_x and soldier.solider_leg_y > boom_start_place_y and soldier.solider_leg_y < boom_end_place_y:
+            return True
+        else:
+            return False
+
+
 
 
 

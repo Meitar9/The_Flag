@@ -30,3 +30,8 @@ def drew_solider_nigth():
     pygame.display.flip()
     consts.MINE.convert()
     return
+
+solider_leg_x = consts.soldier_x + 90
+solider_leg_y = consts.soldier_y + 120
+solider_body_x = consts.soldier_x + 90
+solider_body_y = consts.soldier_y + 90
