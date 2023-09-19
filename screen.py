@@ -43,7 +43,12 @@ def draw_win_message():
                  consts.WIN_COLOR, consts.WIN_LOCATION)
     pygame.time.delay(3000)
 
-def draw_message(message, font_size, color, location):
+def draw_message(message, font, color, location):
     font = pygame.font.SysFont(consts.LOSE_FONT_SIZE)
     text_img = font.render(message, True, color)
     screen.blit(text_img, location)
+
+def draw_massage_on_start():
+
+    pygame.time.delay(3000)
+
