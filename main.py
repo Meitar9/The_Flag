@@ -1,4 +1,6 @@
 import pygame
+from pygame import KEYDOWN
+
 import screen
 import soldier
 
@@ -13,7 +15,6 @@ def open_screen():
         close()
         if pygame.key.get_focused():
             soldier.recognize_movement(pygame.key.get_pressed())
-
 
 
 def close():
