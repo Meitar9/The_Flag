@@ -24,5 +24,6 @@ def recognize_movement(keys):
             consts.soldier_y += 30
         move_ticker += 1
     start_point()
+
     return
 
