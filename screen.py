@@ -25,6 +25,6 @@ def drew_grass():
 
 def draw_flag():
     flag = pygame.transform.scale(consts.FLAG, (120, 90))
-    screen.blit(flag, (1380, 630))
+    screen.blit(flag, (1380, 660))
     pygame.display.flip()
     return
