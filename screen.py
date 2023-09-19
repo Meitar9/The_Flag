@@ -28,3 +28,5 @@ def draw_flag():
     screen.blit(flag, (1380, 660))
     pygame.display.flip()
     return
+
+
