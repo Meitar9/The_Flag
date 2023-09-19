@@ -19,3 +19,8 @@ soldier_x = 0
 soldier_y = 0
 soldier = pygame.transform.scale(SOLDIER, (120, 120))
 position = soldier.get_rect()
+
+solider_leg_x = soldier_x + 90
+solider_leg_y = soldier_y + 120
+solider_body_x = soldier_x + 90
+solider_body_y = soldier_y + 90

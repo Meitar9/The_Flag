@@ -46,5 +46,13 @@ def drew_mine():
     consts.MINE.convert()
     return
 
+def touch_in_flag():
+    if consts.soldier_body_x >= 1380 and consts.soldier_y >= 660:
+        return True
+    return False
+
+
+
+
 build_game_board(consts.game_board)
 drew_mine()
