@@ -20,5 +20,8 @@ def event():
             state["running"] = False
         elif event.type == pygame.KEYDOWN:
             soldier.recognize_movement(pygame.key.get_pressed())
+        elif event.type == pygame.K_SPACE:
+
+
 
 open_screen()
