@@ -1,5 +1,7 @@
 import consts
 import pygame
+
+import game_field
 import screen
 import os
 
@@ -20,6 +22,7 @@ def recognize_movement(keys):
         consts.soldier_y -= 30
     elif keys[pygame.K_DOWN] and check_lines():
         consts.soldier_y += 30
+
     screen.screen.blit(consts.soldier, (consts.soldier_x, consts.soldier_y))
     pygame.display.update()
 

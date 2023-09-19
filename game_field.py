@@ -1,9 +1,9 @@
 import random
 import consts
 import pygame
-import soldier
 
 import screen
+import soldier
 
 
 def build_game_board(game_board):#בניית המטריצה
@@ -14,10 +14,11 @@ def build_game_board(game_board):#בניית המטריצה
         game_board.append(row_list)
     game_board.append(drew_mine())
     game_board.append(soldier.drew_solider_nigth())
+    return pygame.display.flip()
 
 def draw_rect(row, col):#ציור הקוביות
     pygame.draw.rect(surface=consts.screen2, color=consts.rect_color, rect=((place_rect(row, col)), (30, 30)), width=1)
-    pygame.display.flip()
+    # pygame.display.flip()
     return
 
 def place_rect(row, col):#מיקום הקוביות
@@ -59,6 +60,11 @@ def touch_in_boom():#בודק האם נוגע בפצצה
         else:
             return False
 
+def draw_game_board(game_board):
+    screen.screen.fill(consts.BLACK)
+    rect = pygame.Rect(game_board)
+    pygame.draw.rect(screen.screen, consts.BLACK, rect)
+    pygame.display.flip()
+    pygame.time.wait(1000)
+
 build_game_board(consts.game_board)
-
-

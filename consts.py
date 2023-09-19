@@ -6,6 +6,7 @@ WINDOW_WIDTH = 1500
 screen2 = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
 background_color = (61,145,64)
 rect_color = (0,100,0)
+BLACK = (0,0,0)
 GRASS = pygame.image.load("grass.png")
 FLAG = pygame.image.load("flag.png")
 EXPLOTION = pygame.image.load("explotion.png")
